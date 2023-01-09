@@ -8,11 +8,6 @@ public class PlayerShooting : NetworkBehaviour
     [SerializeField] Transform gunBarrell;
     [SerializeField] TrailRenderer bulletTrail;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -36,11 +31,6 @@ public class PlayerShooting : NetworkBehaviour
             {
                 enemyHealth.TakeDamage(10);
             }
-            //GameObject hitObject = hit.transform.gameObject;
-            //if (hitObject.CompareTag("Destroyable"))
-            //{
-            //    hitObject.SetActive(false);
-            //}
         }
         ShootClientRpc();
     }
